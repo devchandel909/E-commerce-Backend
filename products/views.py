@@ -25,10 +25,15 @@ class ProductViewSets(viewsets.ModelViewSet):
     filterset_fields = ['category', 'brand']
 
     # Searching
-    search_fields = ['name', 'discription']
+    search_fields = ['name', 'description']
     
     
 class ProductImageUploadView(APIView):
+    
+    permission_classes = [
+        IsAdminOrReadOnly
+    ]
+
 
     def post(self, request, pk):
 

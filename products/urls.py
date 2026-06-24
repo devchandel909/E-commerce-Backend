@@ -11,13 +11,13 @@ urlpatterns=  router.urls
 urlpatterns= router.urls + [
     
     path(
-    'products/<int:pk>/images/',
+    'products/images/<int:pk>/',
     ProductImageUploadView.as_view(),
     name='product-image-upload'
 ),
 
 path(
-    'images/<int:pk>/delete/',
+    'images/delete/<int:pk>/',
     ProductImageDeleteView.as_view(),
     name='product-image-delete'
 ),

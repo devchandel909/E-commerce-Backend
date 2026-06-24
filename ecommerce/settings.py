@@ -136,11 +136,16 @@ STATIC_URL = 'static/'
 
 REST_FRAMEWORK = {
 
-    'DEFAULT_PAGINATION_CLASS':
+    'DEFAULT_AUTHENTICATION_CLASSES': (
 
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+
+    ),
+
+    'DEFAULT_PAGINATION_CLASS':
     'rest_framework.pagination.PageNumberPagination',
 
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 10,
 }
 
 MEDIA_URL = '/media/'
@@ -148,3 +153,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
+
+RAZORPAY_KEY_ID = " "
+
+RAZORPAY_KEY_SECRET = " "

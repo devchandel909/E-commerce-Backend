@@ -14,7 +14,7 @@ urlpatterns = [
     ),
 
     path(
-        'wishlist/<int:product_id>/',
+        'wishlist/delete/<int:product_id>/',
         WishlistDeleteView.as_view(),
         name='wishlist-delete'
     )
